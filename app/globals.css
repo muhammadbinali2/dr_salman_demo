@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-bg text-text-primary antialiased;
+    background-color: #f5f5f5;
+  }
+}
+
+@layer components {
+  /* Primary CTA Button */
+  .btn-primary {
+    @apply px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:bg-primary-dark transition-colors shadow-medium;
+  }
+  
+  /* Secondary CTA Button */
+  .btn-secondary {
+    @apply px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold text-lg hover:bg-primary hover:text-white transition-colors;
+  }
+  
+  /* Card with depth */
+  .card {
+    @apply bg-bg-subtle border border-border rounded-lg p-6 shadow-soft;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-medium transition-shadow;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
