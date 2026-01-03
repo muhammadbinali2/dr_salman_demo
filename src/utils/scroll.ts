@@ -13,7 +13,7 @@ export function setupSmoothScroll(): void {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      const href = this.getAttribute('href');
+      const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
       if (href) {
         smoothScrollTo(href);
       }
